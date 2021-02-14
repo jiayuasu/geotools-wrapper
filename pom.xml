@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.datasyslab</groupId>
 	<artifactId>geotools-wrapper</artifactId>
-	<version>24.0</version>
+	<version>geotools-24.0</version>
 	
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>GeoTools wrapper for Apache Sedona</description>
@@ -12,8 +12,8 @@
  
     <licenses>
         <license>
-            <name>Apache License 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <name>GNU Lesser General Public License v2.1</name>
+            <url>https://github.com/jiayuasu/geotools-wrapper/blob/main/LICENSE</url>
         </license>
     </licenses>
 

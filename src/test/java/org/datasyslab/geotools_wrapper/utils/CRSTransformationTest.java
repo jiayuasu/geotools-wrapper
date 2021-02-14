@@ -1,18 +1,14 @@
-package org.datasyslab.geotools.wrapper.utils;
+package org.datasyslab.geotools_wrapper.utils;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.sedona.core.enums.FileDataSplitter;
 import org.apache.sedona.core.enums.GridType;
 import org.apache.sedona.core.enums.IndexType;
-import org.apache.sedona.core.geometryObjects.Circle;
 import org.apache.sedona.core.knnJudgement.GeometryDistanceComparator;
-import org.apache.sedona.core.spatialOperator.JoinQuery;
 import org.apache.sedona.core.spatialOperator.KNNQuery;
 import org.apache.sedona.core.spatialOperator.RangeQuery;
-import org.apache.sedona.core.spatialRDD.CircleRDD;
 import org.apache.sedona.core.spatialRDD.PointRDD;
-import org.apache.sedona.core.spatialRDD.PolygonRDD;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.storage.StorageLevel;
@@ -21,10 +17,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.Envelope;
-import org.locationtech.jts.geom.Geometry;
 import org.locationtech.jts.geom.GeometryFactory;
 import org.locationtech.jts.geom.Point;
-import org.locationtech.jts.geom.Polygon;
 
 import java.io.IOException;
 import java.io.InputStream;
