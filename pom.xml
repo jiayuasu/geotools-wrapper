@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.datasyslab</groupId>
 	<artifactId>geotools-wrapper</artifactId>
-	<version>geotools-24.1</version>
+	<version>1.1.0-24.1</version>
 	
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>GeoTools wrapper for Apache Sedona</description>
@@ -124,6 +124,20 @@
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <!--for GeoTiff Reader-->
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-geotiff</artifactId>
+            <version>${geotools.version}</version>
+            <scope>${geotools.scope}</scope>
+        </dependency>
+        <!--for GeoTiff Reader-->
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-coverage</artifactId>
+            <version>${geotools.version}</version>
+            <scope>${geotools.scope}</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
