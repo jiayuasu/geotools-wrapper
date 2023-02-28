@@ -34,14 +34,14 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependency.scope>provided</dependency.scope>
-        <geotools.version>27.2</geotools.version>
+        <geotools.version>28.2</geotools.version>
         <geotools.scope>compile</geotools.scope>
-        <jts.version>1.18.0</jts.version>
+        <jts.version>1.19.0</jts.version>
         <jts2geojson.version>0.14.3</jts2geojson.version>
         <spark.version>3.0.1</spark.version>
         <spark.compat.version>3.0</spark.compat.version>
         <scala.compat.version>2.12</scala.compat.version>
-        <sedona.version>1.2.1-incubating</sedona.version>
+        <sedona.version>1.3.1-incubating</sedona.version>
     </properties>
 
     <dependencies>
@@ -138,7 +138,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!--for GeoTiff Reader-->
+        <!--for ArcInfoAsciiGrid Reader-->
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-arcgrid</artifactId>
+            <version>${geotools.version}</version>
+            <scope>${geotools.scope}</scope>
+        </dependency>
         <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-coverage</artifactId>
