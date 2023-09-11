@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.datasyslab</groupId>
     <artifactId>geotools-wrapper</artifactId>
-    <version>1.4.0-28.2</version>
+    <version>1.5.0-28.2</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>GeoTools wrapper for Apache Sedona</description>
@@ -150,6 +150,17 @@
             <artifactId>gt-coverage</artifactId>
             <version>${geotools.version}</version>
             <scope>${geotools.scope}</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-process-feature</artifactId>
+            <version>${geotools.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.fasterxml.jackson.core</groupId>
