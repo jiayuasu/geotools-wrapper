@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.datasyslab</groupId>
     <artifactId>geotools-wrapper</artifactId>
-    <version>1.5.1-28.2</version>
+    <version>1.5.2-28.2</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>GeoTools wrapper for Apache Sedona</description>
