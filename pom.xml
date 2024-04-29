@@ -118,6 +118,10 @@
                     <groupId>commons-pool</groupId>
                     <artifactId>commons-pool</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>net.sf.geographiclib</groupId>
+                    <artifactId>GeographicLib-Java</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <!--for CRS transformation-->
