@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.datasyslab</groupId>
     <artifactId>geotools-wrapper</artifactId>
-    <version>1.7.1-28.5</version>
+    <version>1.7.2-28.5</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>GeoTools wrapper for Apache Sedona</description>
@@ -38,7 +38,6 @@
         <geotools.scope>compile</geotools.scope>
         <jts.version>1.19.0</jts.version>
         <jts2geojson.version>0.14.3</jts2geojson.version>
-        <jt-jiffle.version>1.1.24</jt-jiffle.version>
         <spark.version>3.0.1</spark.version>
         <spark.compat.version>3.0</spark.compat.version>
         <scala.compat.version>2.12</scala.compat.version>
@@ -193,17 +192,6 @@
             <exclusions>
                 <exclusion>
                     <groupId>com.fasterxml.jackson.core</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>it.geosolutions.jaiext.jiffle</groupId>
-            <artifactId>jt-jiffle-language</artifactId>
-            <version>${jt-jiffle.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
