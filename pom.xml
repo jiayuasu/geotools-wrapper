@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.datasyslab</groupId>
     <artifactId>geotools-wrapper</artifactId>
-    <version>1.8.0-33.1</version>
+    <version>1.8.1-33.1</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>GeoTools wrapper for Apache Sedona</description>
@@ -36,12 +36,11 @@
         <dependency.scope>provided</dependency.scope>
         <geotools.version>33.1</geotools.version>
         <geotools.scope>compile</geotools.scope>
-        <jts.version>1.19.0</jts.version>
-        <jts2geojson.version>0.14.3</jts2geojson.version>
-        <spark.version>3.0.1</spark.version>
-        <spark.compat.version>3.0</spark.compat.version>
-        <scala.compat.version>2.12</scala.compat.version>
-        <sedona.version>1.3.1-incubating</sedona.version>
+        <jts.version>1.20.0</jts.version>
+        <spark.version>3.5.5</spark.version>
+        <spark.compat.version>3.5</spark.compat.version>
+        <scala.compat.version>2.13</scala.compat.version>
+        <sedona.version>1.8.0</sedona.version>
     </properties>
 
     <dependencies>
@@ -52,20 +51,20 @@
             <scope>${dependency.scope}</scope>
         </dependency>
         <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${scala.compat.version}</artifactId>
+            <version>${spark.version}</version>
+            <scope>${dependency.scope}</scope>
+        </dependency>
+        <dependency>
             <groupId>org.locationtech.jts</groupId>
             <artifactId>jts-core</artifactId>
             <version>${jts.version}</version>
             <scope>${dependency.scope}</scope>
         </dependency>
         <dependency>
-            <groupId>org.wololo</groupId>
-            <artifactId>jts2geojson</artifactId>
-            <version>${jts2geojson.version}</version>
-            <scope>${dependency.scope}</scope>
-        </dependency>
-        <dependency>
             <groupId>org.apache.sedona</groupId>
-            <artifactId>sedona-core-${spark.compat.version}_${scala.compat.version}</artifactId>
+            <artifactId>sedona-spark-${spark.compat.version}_${scala.compat.version}</artifactId>
             <version>${sedona.version}</version>
             <scope>${dependency.scope}</scope>
         </dependency>
@@ -235,8 +234,16 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <argLine>@{argLine} --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED</argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>2.1</version>
+                <version>3.5.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
