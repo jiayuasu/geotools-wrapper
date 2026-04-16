@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.datasyslab</groupId>
     <artifactId>geotools-wrapper</artifactId>
-    <version>1.8.1-33.1</version>
+    <version>1.9.0-33.5</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>GeoTools wrapper for Apache Sedona</description>
@@ -34,7 +34,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependency.scope>provided</dependency.scope>
-        <geotools.version>33.1</geotools.version>
+        <geotools.version>33.5</geotools.version>
         <geotools.scope>compile</geotools.scope>
         <jts.version>1.20.0</jts.version>
         <spark.version>3.5.5</spark.version>
